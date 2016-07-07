@@ -4,6 +4,8 @@ Handwriting recognition
 This is a test and demo of the Neural network Eiffel library. It uses the digits Handwriting database from the MNIST (http://yann.lecun.com/exdb/mnist/).
 This is based on the "Neural Networks and Deep Learning" internet book (http://neuralnetworksanddeeplearning.com).
 
+Note: Please note that the Neural network is not working yet.
+
 Installation
 ------------
 
