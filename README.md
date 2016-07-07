@@ -9,7 +9,6 @@ Note: Please note that the Neural network is not working yet.
 Installation
 ------------
 
- * Put a font.ttf file in the "project" directory
  * Put the unzipped t10k-images-idx3-ubyte, t10k-labels-idx1-ubyte, train-images-idx3-ubyte and train-labels-idx1-ubyte in the "project" directory 
 
 License
