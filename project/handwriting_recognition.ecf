@@ -12,7 +12,7 @@
 		<library name="game_core" location="$ISE_LIBRARY\contrib\library\game2\game_core\game_core-safe.ecf"/>
 		<library name="game_shared" location="$ISE_LIBRARY\contrib\library\game2\game_shared\game_shared-safe.ecf"/>
 		<library name="game_text" location="$ISE_LIBRARY\contrib\library\game2\game_text\game_text-safe.ecf"/>
-		<library name="neural_network" location="\home\louis\prog\Neural-Network\neural_network.ecf" readonly="false"/>
+		<library name="neural_network" location="..\Neural-Network\neural_network.ecf" readonly="false"/>
 		<cluster name="handwriting_recognition" location=".\" recursive="true">
 			<file_rule>
 				<exclude>/.svn$</exclude>
