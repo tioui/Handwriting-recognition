@@ -75,15 +75,15 @@ feature -- Access
 			-- The {NEURAL_NETWORK} used to recognise images
 
 	learning
-			-- Use `Current' to make the `neural_network' learne handwriting recognition
+			-- Use `Current' to make the `neural_network' learn handwriting recognition
 		require
 			No_Error: not has_error
 		local
 			l_image_values:ARRAYED_LIST[NATURAL_8]
 		do
 			create l_image_values.make_filled (images_height * images_width)
-			label_file.go (8)
-			image_file.go (16)
+			label_file.go (8) -- Passing over the header
+			image_file.go (16) -- Passing over the header
 			across 1 |..| images_count as la_index1 loop
 				print("Learning: " + la_index1.item.out + "/" + images_count.out + "%N")
 				label_file.read_natural_8
@@ -106,8 +106,8 @@ feature -- Access
 			l_value:REAL_64
 		do
 			create l_image_values.make_filled (images_height * images_width)
-			label_file.go (8)
-			image_file.go (16)
+			label_file.go (8) -- Passing over the header
+			image_file.go (16) -- Passing over the header
 			across 1 |..| images_count as la_index1 loop
 				label_file.read_natural_8
 				across 1 |..| (images_height * images_width) as la_index2 loop
