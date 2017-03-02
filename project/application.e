@@ -24,8 +24,6 @@ feature {NONE} -- Initialization
 		do
 			l_label_learning_file_name := "train-labels-idx1-ubyte"
 			l_image_learning_file_name := "train-images-idx3-ubyte"
---			l_label_learning_file_name := "t10k-labels-idx1-ubyte"
---			l_image_learning_file_name := "t10k-images-idx3-ubyte"
 			l_label_testing_file_name := "t10k-labels-idx1-ubyte"
 			l_image_testing_file_name := "t10k-images-idx3-ubyte"
 			create l_learning_set.make(l_label_learning_file_name, l_image_learning_file_name)

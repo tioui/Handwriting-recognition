@@ -102,6 +102,8 @@ feature -- Access
 		local
 			l_image_values:ARRAYED_LIST[NATURAL_8]
 			l_output:LIST[REAL_64]
+			l_index:INTEGER
+			l_value:REAL_64
 		do
 			create l_image_values.make_filled (images_height * images_width)
 			label_file.go (8)
@@ -113,11 +115,22 @@ feature -- Access
 					l_image_values.put_i_th (image_file.last_natural_8, la_index2.item)
 				end
 				l_output := use_neural_network(l_image_values)
-				print("Index: " + la_index1.item.out + " | value: " + label_file.last_natural_8.out + " | Output: (")
-				across l_output as la_output loop
-					print(la_output.item.out + ", ")
+				l_value := 0.0
+				l_index := 0
+				print("Output values: (")
+				from
+					l_output.start
+				until
+					l_output.exhausted
+				loop
+					print(l_output.item.out + ", ")
+					if l_output.item > l_value then
+						l_value := l_output.item
+						l_index := l_output.index
+					end
+					l_output.forth
 				end
-				print(")%N")
+				print(")%NIndex: " + la_index1.item.out + " | value: " + label_file.last_natural_8.out + " | Recognition: " + l_index.out + "%N")
 			end
 		end
 
